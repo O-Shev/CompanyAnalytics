@@ -1,0 +1,14 @@
+{
+  "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+  "tasks.max": "1",
+  "database.hostname": "master_postgres",
+  "database.port": "5432",
+  "database.user": "user",
+  "database.password": "password",
+  "database.dbname": "company_analytics",
+  "database.server.name": "company_analytics_server",
+  "slot.name": "debezium_slot",
+  "plugin.name": "pgoutput",
+  "publication.name": "debezium_publication",
+  "table.include.list": "public.company,public.address,public.address_category,public.company_address,public.address_category_mapping"
+}

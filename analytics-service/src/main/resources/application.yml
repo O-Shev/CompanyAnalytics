@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: analytics-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/company_analytics
+    username: user
+    password: password
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  kafka:
+    bootstrap-servers: localhost:9092 # Update with your Kafka broker address
+    consumer:
+      group-id: analytics-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest # Read all events if new consumer group
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
