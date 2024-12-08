@@ -76,4 +76,9 @@ public class CompanyService {
         company.getAddresses().add(address);
         companyRepository.save(company);
     }
+
+
+    public void aggregateAddressCategoryStats(Long id){
+
+    }
 }

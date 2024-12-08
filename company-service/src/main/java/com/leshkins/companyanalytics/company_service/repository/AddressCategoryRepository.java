@@ -12,4 +12,6 @@ import java.util.List;
 public interface AddressCategoryRepository extends JpaRepository<AddressCategory, Long> {
 
     List<AddressCategory> findAllByNameIn(List<String> names);
+
+
 }

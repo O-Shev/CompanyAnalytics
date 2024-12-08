@@ -34,6 +34,8 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.kafka:spring-kafka-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	implementation("com.fasterxml.jackson.core:jackson-core:2.18.1")
+	implementation("org.apache.kafka:kafka-streams:3.8.0")
 
 
 }

@@ -1,10 +1,13 @@
+server:
+  port: 8081
 spring:
   application:
     name: analytics-service
 
+
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/company_analytics
+    url: jdbc:postgresql://localhost:5433/analytics_service
     username: user
     password: password
 
@@ -19,7 +22,7 @@ spring:
 
 
   kafka:
-    bootstrap-servers: localhost:9092 # Update with your Kafka broker address
+    bootstrap-servers: localhost:29092
     consumer:
       group-id: analytics-service-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
